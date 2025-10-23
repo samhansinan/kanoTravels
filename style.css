@@ -1,0 +1,411 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6ede9;
+    position: relative;
+}
+
+.top-nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd;
+    opacity: 0.9;
+    padding: 40px 40px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.logo img {
+    width: 120px;
+    height: 100px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 100px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 70px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #646663;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+.navbar ul li::after {
+    content: "|";
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #eee3f2;
+}
+
+.navbar ul li:last-child::after {
+    content: "";
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #1a6a92;
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding-top: 80px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 98;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    text-align: right;
+    padding: 15px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.close-icon i {
+    font-size: 28px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.close-icon i:hover {
+    color: #ff4d4d;
+}
+
+/* Hero section with proper padding to account for fixed nav */
+.hero {
+    padding-top: 180px;
+    width: 100%;
+}
+
+.main-image {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-image .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.main-image .content h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    color: #230a0a;
+    text-shadow: 2px 2px 4px rgba(48, 7, 7, 0.5);
+}
+
+.main-image .content p {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+
+.designation{
+   
+     padding: 50px 20px;
+}
+.designation h1{
+    text-align: center;
+    font-size: 28px;
+}
+.designation p{
+    text-align: center;
+}
+
+.images{
+     display: flex;
+  justify-content: center;  /* Centers all image boxes horizontally */
+  align-items: center;      /* Centers vertically (if needed) */
+  flex-wrap: wrap;          /* Moves to next line on smaller screens */
+  gap: 30px;
+}
+
+.images .image-box{
+ width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s;
+  
+}
+
+.image-box:hover {
+  transform: scale(1.05);
+}
+
+
+.images .image-box img{
+    width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+
+
+.image-box span {
+  display: block;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+
+.services .head{
+    text-align: center;
+  margin-bottom: 70px;
+    font-size: 28px;
+}
+
+
+.services-all{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.service-box{
+    background-color: #faf3f3;
+    margin:0 10px;
+    border-radius: 20px ;
+    padding: 25px;
+    flex: 1 1 300px;
+    max-width: 230px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.service-box .tag{
+    display: flex;
+    align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-box .tag p{
+    font-size: 28px;
+      color: #ff6b6b;
+    margin-right:10px ;
+}
+.service-box .tag h2 {
+  font-size: 20px;
+  color: #222;
+}
+
+.service-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+footer{
+    background-color: #221d1d;
+    color: white;
+    padding: 40px ;
+    margin-top: 100px;
+   
+}
+
+.footer-section{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+   
+}
+
+.footer-section .contact{
+    font-size: 15px;
+    
+
+}
+/* Tablet & Mobile Responsive */
+@media (max-width: 1024px) {
+    .top-nav {
+        padding: 20px 30px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 85px;
+    }
+
+    .navbar {
+        display: none;
+        margin-right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .hero {
+        padding-top: 140px;
+    }
+
+    .main-image {
+        height: 400px;
+    }
+
+    .main-image .content h1 {
+        font-size: 32px;
+    }
+
+    .main-image .content p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Specific (Max 768px) */
+@media (max-width: 768px) {
+    .logo img {
+        width: 80px;
+        height: 70px;
+    }
+
+    .menu-icon {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .top-nav {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .main-image .content h1 {
+        font-size: 24px;
+    }
+
+    .main-image .content p {
+        font-size: 14px;
+    }
+}
