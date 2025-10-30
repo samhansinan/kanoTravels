@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+     <link rel="icon" type="image/png" href="image/logo2.jpg"/>
      <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -13,7 +14,7 @@
     <section>
  <div class="top-nav">
         <div class="logo">
-            <img src="image/logo1.jpg" alt="Dp Travel Logo">
+            <img src="image/logo2.jpg" alt="Dp Travel Logo">
             
         </div>
          <div class="menu-icon" onclick="toggleMenu()"><i class='bx bx-menu-alt-right'></i></div>
@@ -21,9 +22,9 @@
             <ul>
                 <li><a href="#">Home </a></li>
                 <li><a href="#service">Services </a></li>
-                <li><a href="#">Popular Desinations </a></li>
+                <li><a href="#Desinations">Popular Desinations </a></li>
                 <li><a href="About.html">About</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#contect">Contact Us</a></li>
             </ul>
         </div>
      <div class="sidebar">
@@ -48,7 +49,7 @@
 
 <section class="hero">
     <div class="main-image">
-         <img id="img1" src="image/view6.jpg" alt="img1">
+         <img id="img1" src="image/view12.jpg" alt="img1">
     <img id="img2" src="image/view5.jpg" alt="img2">
        
     
@@ -63,7 +64,7 @@
       
 </section>
 
-<section class="designation">
+<section class="designation" id="Desinations">
     <h1>Popular Desinations </h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto!</p>
     <div class="images">
@@ -103,7 +104,7 @@
 
 </section>
 
-<section class="services">
+<section class="services" id="service">
     <h1 class="head">Our Services</h1>
     <div class="services-all">
         <div class="service-box">
@@ -172,7 +173,7 @@
                 </div>
 
                 <!-- Contact Info -->
-                <div class="footer-section footer-contact">
+                <div class="footer-section footer-contact" id="contect">
                     <h3>Contact Us</h3>
                     <div class="footer-contact-item">
                         <i class='bx bx-map'></i>
@@ -220,7 +221,7 @@
       'image/view7.jpg',
       'image/view10.jpg',
       'image/view9.jpg',
-      'image/view6.jpg'
+      'image/view12.jpg'
     ];
 
     let index = 0;
